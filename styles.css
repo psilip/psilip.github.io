@@ -1,0 +1,64 @@
+/* styles.css - separate CSS for node styling */
+
+/* Base node styles */
+.node.instance rect {
+  fill: white;
+  stroke: black;
+  stroke-width: 1px;
+  rx: 4;
+  ry: 4;
+}
+
+.node.class ellipse {
+  fill: white;    /* default, overridden by prefix rules below */
+  /*stroke: black;
+  stroke-width: 1px;*/
+}
+
+/* Text styling */
+.node text {
+  fill: black;
+  font-family: sans-serif;
+}
+
+/*Base edge styles */
+
+line.link {
+  stroke: black;
+  stroke-width: 2px;
+}
+
+.CodeMirror.cm-s-default {height: auto}
+
+/* Color-coding by ontology prefix */
+.node.prefix-noark.class ellipse {
+  fill: #aae8;
+}
+
+.node.prefix-cv.class ellipse {
+  fill: #aea8;
+}
+
+.node.prefix-cpsv.class ellipse {
+  fill: #e41a1c;
+}
+
+.node.prefix-cpsvno.class ellipse {
+  fill: #377eb8;
+}
+
+.node.prefix-cpsvap.class ellipse {
+  fill: #4daf4a;
+}
+
+.node.prefix-dcat.class ellipse {
+  fill: #984ea3;
+}
+
+.node.prefix-dcatno.class ellipse {
+  fill: #ff7f00;
+}
+
+.node.prefix-dcatap.class ellipse {
+  fill: #ffff33;
+}

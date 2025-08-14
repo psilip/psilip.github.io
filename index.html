@@ -1,16 +1,34 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>WCO data model ontology</title>
-	</head>
-	<body>
-	<!--a href="./test.ttl">Data model as ttl</a-->
-	<div class="impress">
-		<h1>And we're testing even more</h1>
-		<div>Blublablu</div>
-	</div>
-	<script src="js/impress.js" />
-	<script src="https://cdn.jsdelivr.net/gh/impress/impress.js@2.0.0/js/impress.js" />
-	<script>impress().init()</script>
-	</body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>RDF D3 Demo - Final</title>
+  <style>
+    body { display: flex; height: 100vh; margin: 0; }
+    #left { display: flex; flex-direction: column; flex: 1; }
+    #graph { flex: 1; }
+    #timeline { height: 150px; }
+    #right { width: 400px; display: flex; flex-direction: column; }
+    #turtle { flex: 1; height: 100vh; }
+    textarea { width: 100%; height: 100%; font-family: monospace; }
+    .event-marker { fill: steelblue; }
+    .event-label { font-size: 12px; text-anchor: middle; }
+  </style>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="https://cdn.jsdelivr.net/npm/n3@1.16.0/browser/n3.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/turtle/turtle.min.js"></script>
+</head>
+<body>
+  <div id="left">
+    <svg id="graph"></svg>
+    <div id="timeline"></div>
+  </div>
+  <div id="right">
+    <textarea id="turtle"></textarea>
+  </div>
+  <script type="module" src="./src/main.js"></script>
+</body>
 </html>
