@@ -10,27 +10,20 @@
 @prefix dcat:   <http://www.w3.org/ns/dcat#> .
 @prefix dcatno: <http://publications.europa.eu/resource/authority/dcat-ap-no#> .
 @prefix dcatap: <http://publications.europa.eu/resource/authority/dcat-ap#> .
-@prefix noark:  <http://localhost:8090/noark#> .
 @prefix dct:    <http://purl.org/dc/terms/> .
 @prefix prov:   <http://www.w3.org/ns/prov#> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix :	<http://toll.no/events#> .
 
-:reg1 a noark:Registrering;
-    dct:title "Anmeldelse av forhold"@nb;
-    prov:startedAtTime "2025-06-01T08:00:00Z"^^xsd:dateTime;
-    prov:wasGeneratedBy cv:agent1.
 
 :agent1 a cv:PublicOrganisation;
     dct:identifier "880455702";
     dct:title "Tolletaten"@nb.
 
-:output1 a cv:Output;
-    prov:generatedAtTime "2025-06-02T09:00:00Z"^^xsd:dateTime;
-    prov:wasAttributedTo cv:agent1.
-
 :agent2 a cv:PublicOrganisation;
     dct:identifier "915429785";
     dct:title "Politi- og lensmannsetaten"@nb.
 
-:reg1 owl:sameAs :output1 .
+:output1 a cv:Output;
+    prov:generatedAtTime "2025-06-02T09:00:00Z"^^xsd:dateTime;
+    prov:wasAttributedTo cv:agent1.
